@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://pixelfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/stars.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/gameover.gd" type="Script" id=3]
+
+[node name="gameover" type="Node"]
+script = ExtResource( 3 )
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.2605
+margin_right = -1.2605
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="stars" parent="." instance=ExtResource( 2 )]
+
+[node name="gameoverlable" type="Label" parent="."]
+margin_left = 111.0
+margin_top = 39.0
+margin_right = 219.0
+margin_bottom = 85.0
+custom_fonts/font = ExtResource( 1 )
+text = "Game over"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="highscorelabel" type="Label" parent="."]
+margin_left = 109.875
+margin_top = 68.1398
+margin_right = 206.875
+margin_bottom = 102.14
+custom_fonts/font = ExtResource( 1 )
+text = "High Score - "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="escapelabel" type="Label" parent="."]
+margin_left = 118.0
+margin_top = 140.0
+margin_right = 219.0
+margin_bottom = 180.0
+custom_fonts/font = ExtResource( 1 )
+text = "press enter to play again
+press F for main menu
+press Esc to quit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
